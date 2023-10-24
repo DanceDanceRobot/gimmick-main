@@ -10,8 +10,8 @@ Motor::Motor(int in1, int in2):
 }
 
 void Motor::startMotor() {
-  digitalWrite(in1_, HIGH);
-  digitalWrite(in2_, LOW);
+  digitalWrite(in1_, LOW);
+  digitalWrite(in2_, HIGH);
   moving_ = true;
 }
 

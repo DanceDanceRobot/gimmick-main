@@ -21,12 +21,12 @@
 // echo, trigの順番
 Sonic sonic1{14, 27};
 Sonic sonic2{0, 2};
-//Sonic sonic3{35, 34};
+Sonic sonic3{35, 15};
 Sonic sonic4{23, 22};
 
 // モータ
 Motor motor1(19, 17);
-Motor motor2(5, 18);
+Motor motor2(18, 5);
 Motor motor3(33, 32);
 
 // サーボ
@@ -37,7 +37,7 @@ Servo servo2;
 // 回転板
 Kaitenban kaitenban1(motor1, sonic1, LIMIT1);
 Kaitenban kaitenban2(motor2, sonic2, LIMIT2);
-Kaitenban kaitenban3(motor3, sonic1, LIMIT3);
+Kaitenban kaitenban3(motor3, sonic3, LIMIT3);
 
 // ドア
 Door door(&servo1, &servo2, sonic4);
