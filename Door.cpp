@@ -6,6 +6,10 @@ Door::Door(Servo* servo1, Servo* servo2, Sonic sonic) :
   servo1_(servo1), servo2_(servo2), sonic_(sonic), state_(states::WAITING) {}
 
 void Door::execute() {
+  if (sonic_.distanceCm() < 10) {
+    openDoor();
+  }
+  /*
   static double counter = 0;
   switch(state_) {
     case states::WAITING:
@@ -25,6 +29,7 @@ void Door::execute() {
     case states::FINISHED:
       break;
   }
+  */
 }
 
 void Door::openDoor() {

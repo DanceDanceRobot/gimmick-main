@@ -43,6 +43,7 @@ Kaitenban kaitenban3(motor3, sonic3, LIMIT3);
 Door door(&servo1, &servo2, sonic4);
 
 void setup() {
+  
   // サーボをつないでいるピンを設定
   servo1.attach(13);
   servo2.attach(12);
@@ -52,6 +53,8 @@ void setup() {
   
   Serial.begin( 115200 );//Arduino Unoは9600,ESPで試す場合はは115200
   Serial.println("start");
+
+  delay(1000);
 }
 
 // メインループ 
